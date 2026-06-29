@@ -1,85 +1,25 @@
-     1	<!-- ═══════════════════════════════════════════════════════════════════════════════
-     2	     M O T I O N M A S T E R   P R O  ·  README v2.0.0
-     3	     Dual-Engine AI Video Synthesis Platform
-     4	     ═══════════════════════════════════════════════════════════════════════════════ -->
-     5	
-     6	<div align="center">
-     7	
-     8	<!-- Animated SVG Header -->
-     9	<svg viewBox="0 0 900 320" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
-    10	  <defs>
-    11	    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-    12	      <stop offset="0%" stop-color="#0a0a1a"/>
-    13	      <stop offset="50%" stop-color="#0d1b2a"/>
-    14	      <stop offset="100%" stop-color="#1b1b3a"/>
-    15	    </linearGradient>
-    16	    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-    17	      <stop offset="0%" stop-color="#00d4ff">
-    18	        <animate attributeName="stop-color" values="#00d4ff;#7b2cbf;#ff006e;#00d4ff" dur="6s" repeatCount="indefinite"/>
-    19	      </stop>
-    20	      <stop offset="50%" stop-color="#7b2cbf">
-    21	        <animate attributeName="stop-color" values="#7b2cbf;#ff006e;#00d4ff;#7b2cbf" dur="6s" repeatCount="indefinite"/>
-    22	      </stop>
-    23	      <stop offset="100%" stop-color="#ff006e">
-    24	        <animate attributeName="stop-color" values="#ff006e;#00d4ff;#7b2cbf;#ff006e" dur="6s" repeatCount="indefinite"/>
-    25	      </stop>
-    26	    </linearGradient>
-    27	    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-    28	      <stop offset="0%" stop-color="#00d4ff"/>
-    29	      <stop offset="100%" stop-color="#ff006e"/>
-    30	    </linearGradient>
-    31	    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
-    32	      <feGaussianBlur stdDeviation="3" result="blur"/>
-    33	      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-    34	    </filter>
-    35	    <filter id="strongGlow" x="-30%" y="-30%" width="160%" height="160%">
-    36	      <feGaussianBlur stdDeviation="6" result="blur"/>
-    37	      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-    38	    </filter>
-    39	    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-    40	      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#00d4ff" stroke-width="0.3" opacity="0.15"/>
-    41	    </pattern>
-    42	    <radialGradient id="particleGrad">
-    43	      <stop offset="0%" stop-color="#00d4ff" stop-opacity="1"/>
-    44	      <stop offset="100%" stop-color="#00d4ff" stop-opacity="0"/>
-    45	    </radialGradient>
-    46	  </defs>
-    47	  <rect width="900" height="320" fill="url(#bgGrad)" rx="12"/>
-    48	  <rect width="900" height="320" fill="url(#grid)" rx="12"/>
-    49	  <rect x="2" y="2" width="896" height="316" fill="none" stroke="url(#accentGrad)" stroke-width="2" rx="10" opacity="0.6">
-    50	    <animate attributeName="opacity" values="0.6;1;0.6" dur="3s" repeatCount="indefinite"/>
-    51	  </rect>
-    52	  <g opacity="0.8">
-    53	    <path d="M 20 60 L 20 20 L 60 20" fill="none" stroke="#00d4ff" stroke-width="2" filter="url(#glow)">
-    54	      <animate attributeName="stroke-dasharray" values="0,120;120,0" dur="2s" repeatCount="indefinite"/>
-    55	    </path>
-    56	    <path d="M 880 60 L 880 20 L 840 20" fill="none" stroke="#ff006e" stroke-width="2" filter="url(#glow)">
-    57	      <animate attributeName="stroke-dasharray" values="0,120;120,0" dur="2s" begin="0.5s" repeatCount="indefinite"/>
-    58	    </path>
-    59	    <path d="M 20 260 L 20 300 L 60 300" fill="none" stroke="#ff006e" stroke-width="2" filter="url(#glow)">
-    60	      <animate attributeName="stroke-dasharray" values="0,120;120,0" dur="2s" begin="1s" repeatCount="indefinite"/>
-    61	    </path>
-    62	    <path d="M 880 260 L 880 300 L 840 300" fill="none" stroke="#00d4ff" stroke-width="2" filter="url(#glow)">
-    63	      <animate attributeName="stroke-dasharray" values="0,120;120,0" dur="2s" begin="1.5s" repeatCount="indefinite"/>
-    64	    </path>
-    65	  </g>
-    66	  <g>
-    67	    <circle cx="100" cy="80" r="2" fill="url(#particleGrad)" filter="url(#glow)">
-    68	      <animate attributeName="cy" values="80;40;80" dur="4s" repeatCount="indefinite"/>
-    69	      <animate attributeName="opacity" values="0;1;0" dur="4s" repeatCount="indefinite"/>
-    70	    </circle>
-    71	    <circle cx="200" cy="250" r="1.5" fill="url(#particleGrad)" filter="url(#glow)">
-    72	      <animate attributeName="cy" values="250;200;250" dur="5s" repeatCount="indefinite"/>
-    73	      <animate attributeName="opacity" values="0;1;0" dur="5s" repeatCount="indefinite"/>
-    74	    </circle>
-    75	    <circle cx="750" cy="100" r="2.5" fill="url(#particleGrad)" filter="url(#glow)">
-    76	      <animate attributeName="cy" values="100;60;100" dur="3.5s" repeatCount="indefinite"/>
-    77	      <animate attributeName="opacity" values="0;1;0" dur="3.5s" repeatCount="indefinite"/>
-    78	    </circle>
-    79	    <circle cx="650" cy="280" r="1.8" fill="url(#particleGrad)" filter="url(#glow)">
-    80	      <animate attributeName="cy" values="280;240;280" dur="4.5s" repeatCount="indefinite"/>
+<!-- ═══════════════════════════════════════════════════════════════════════════════
+     M O T I O N M A S T E R   P R O  ·  README v2.0.0
+     Dual-Engine AI Video Synthesis Platform
+     ═══════════════════════════════════════════════════════════════════════════════ -->
 
-<br>
+<div align="center">
+
+```
+███╗   ███╗ ██████╗ ████████╗██╗ ██████╗ ███╗   ██╗
+████╗ ████║██╔═══██╗╚══██╔══╝██║██╔═══██╗████╗  ██║
+██╔████╔██║██║   ██║   ██║   ██║██║   ██║██╔██╗ ██║
+██║╚██╔╝██║██║   ██║   ██║   ██║██║   ██║██║╚██╗██║
+██║ ╚═╝ ██║╚██████╔╝   ██║   ██║╚██████╔╝██║ ╚████║
+╚═╝     ╚═╝ ╚═════╝    ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝
+
+███╗   ███╗ █████╗ ███████╗████████╗███████╗██████╗     ██████╗ ██████╗  ██████╗
+████╗ ████║██╔══██╗██╔════╝╚══██╔══╝██╔════╝██╔══██╗    ██╔══██╗██╔══██╗██╔═══██╗
+██╔████╔██║███████║███████╗   ██║   █████╗  ██████╔╝    ██████╔╝██████╔╝██║   ██║
+██║╚██╔╝██║██╔══██║╚════██║   ██║   ██╔══╝  ██╔══██╗    ██╔═══╝ ██╔══██╗██║   ██║
+██║ ╚═╝ ██║██║  ██║███████║   ██║   ███████╗██║  ██║    ██║     ██║  ██║╚██████╔╝
+╚═╝     ╚═╝╚═╝  ╚═╝╚══════╝   ╚═╝   ╚══════╝╚═╝  ╚═╝    ╚═╝     ╚═╝  ╚═╝ ╚═════╝
+```
 
 ### **Dual-Engine AI Video Synthesis · Storyboard-to-Cinema Pipeline · Real-time Voiceover**
 *Production-grade · GPU-Optimized · Gradio-Powered · L4/A100 Ready*
@@ -105,9 +45,9 @@
 
 ---
 
-> **MotionMaster Pro** is a production-grade, dual-engine AI video synthesis platform combining
-> **I2VGenXL** image-to-video diffusion with **Stable Diffusion XL** cinematic frame generation.
-> Automated prompt engineering, OpenCV post-processing, gTTS voiceover, and a complete
+> **MotionMaster Pro** is a production-grade, dual-engine AI video synthesis platform combining  
+> **I2VGenXL** image-to-video diffusion with **Stable Diffusion XL** cinematic frame generation.  
+> Automated prompt engineering, OpenCV post-processing, gTTS voiceover, and a complete  
 > storyboard-to-MP4 pipeline — all inside a single Gradio session on a 24 GB L4 GPU.
 
 ---
@@ -118,6 +58,7 @@
 
 ---
 
+## 📚 Table of Contents
 
 <details>
 <summary><strong>Click to expand full contents</strong></summary>
