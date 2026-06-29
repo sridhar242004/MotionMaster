@@ -1,0 +1,189 @@
+<svg viewBox="0 0 900 320" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0a1a"/>
+      <stop offset="50%" stop-color="#0d1b2a"/>
+      <stop offset="100%" stop-color="#1b1b3a"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00d4ff">
+        <animate attributeName="stop-color" values="#00d4ff;#7b2cbf;#ff006e;#00d4ff" dur="6s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="50%" stop-color="#7b2cbf">
+        <animate attributeName="stop-color" values="#7b2cbf;#ff006e;#00d4ff;#7b2cbf" dur="6s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" stop-color="#ff006e">
+        <animate attributeName="stop-color" values="#ff006e;#00d4ff;#7b2cbf;#ff006e" dur="6s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00d4ff"/>
+      <stop offset="100%" stop-color="#ff006e"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="strongGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#00d4ff" stroke-width="0.3" opacity="0.15"/>
+    </pattern>
+    <radialGradient id="particleGrad">
+      <stop offset="0%" stop-color="#00d4ff" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#00d4ff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="900" height="320" fill="url(#bgGrad)" rx="12"/>
+  <rect width="900" height="320" fill="url(#grid)" rx="12"/>
+  <rect x="2" y="2" width="896" height="316" fill="none" stroke="url(#accentGrad)" stroke-width="2" rx="10" opacity="0.6">
+    <animate attributeName="opacity" values="0.6;1;0.6" dur="3s" repeatCount="indefinite"/>
+  </rect>
+  <g opacity="0.8">
+    <path d="M 20 60 L 20 20 L 60 20" fill="none" stroke="#00d4ff" stroke-width="2" filter="url(#glow)">
+      <animate attributeName="stroke-dasharray" values="0,120;120,0" dur="2s" repeatCount="indefinite"/>
+    </path>
+    <path d="M 880 60 L 880 20 L 840 20" fill="none" stroke="#ff006e" stroke-width="2" filter="url(#glow)">
+      <animate attributeName="stroke-dasharray" values="0,120;120,0" dur="2s" begin="0.5s" repeatCount="indefinite"/>
+    </path>
+    <path d="M 20 260 L 20 300 L 60 300" fill="none" stroke="#ff006e" stroke-width="2" filter="url(#glow)">
+      <animate attributeName="stroke-dasharray" values="0,120;120,0" dur="2s" begin="1s" repeatCount="indefinite"/>
+    </path>
+    <path d="M 880 260 L 880 300 L 840 300" fill="none" stroke="#00d4ff" stroke-width="2" filter="url(#glow)">
+      <animate attributeName="stroke-dasharray" values="0,120;120,0" dur="2s" begin="1.5s" repeatCount="indefinite"/>
+    </path>
+  </g>
+  <g>
+    <circle cx="100" cy="80" r="2" fill="url(#particleGrad)" filter="url(#glow)">
+      <animate attributeName="cy" values="80;40;80" dur="4s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;1;0" dur="4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="200" cy="250" r="1.5" fill="url(#particleGrad)" filter="url(#glow)">
+      <animate attributeName="cy" values="250;200;250" dur="5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;1;0" dur="5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="750" cy="100" r="2.5" fill="url(#particleGrad)" filter="url(#glow)">
+      <animate attributeName="cy" values="100;60;100" dur="3.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;1;0" dur="3.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="650" cy="280" r="1.8" fill="url(#particleGrad)" filter="url(#glow)">
+      <animate attributeName="cy" values="280;240;280" dur="4.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;1;0" dur="4.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="300" cy="60" r="1.2" fill="url(#particleGrad)" filter="url(#glow)">
+      <animate attributeName="cy" values="60;30;60" dur="3s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;1;0" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="500" cy="290" r="2" fill="url(#particleGrad)" filter="url(#glow)">
+      <animate attributeName="cy" values="290;250;290" dur="5.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;1;0" dur="5.5s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  <rect x="0" y="0" width="900" height="4" fill="#00d4ff" opacity="0.1" filter="url(#glow)">
+    <animate attributeName="y" values="0;320;0" dur="8s" repeatCount="indefinite"/>
+  </rect>
+  <text x="450" y="110" text-anchor="middle" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="52" font-weight="900" fill="url(#titleGrad)" filter="url(#strongGlow)" letter-spacing="6">
+    MOTIONMASTER
+    <animate attributeName="opacity" values="0.9;1;0.9" dur="3s" repeatCount="indefinite"/>
+  </text>
+  <text x="450" y="155" text-anchor="middle" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="32" font-weight="700" fill="#ffffff" letter-spacing="12" opacity="0.9">
+    PRO
+    <animate attributeName="opacity" values="0.7;1;0.7" dur="2s" repeatCount="indefinite"/>
+  </text>
+  <line x1="280" y1="175" x2="620" y2="175" stroke="url(#accentGrad)" stroke-width="1.5" filter="url(#glow)">
+    <animate attributeName="x1" values="280;300;280" dur="4s" repeatCount="indefinite"/>
+    <animate attributeName="x2" values="620;600;620" dur="4s" repeatCount="indefinite"/>
+  </line>
+  <text x="450" y="205" text-anchor="middle" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="500" fill="#a0a0c0" letter-spacing="3">
+    DUAL-ENGINE AI VIDEO SYNTHESIS
+  </text>
+  <g transform="translate(0, 10)">
+    <rect x="205" y="225" width="120" height="28" rx="14" fill="none" stroke="#00d4ff" stroke-width="1" opacity="0.7">
+      <animate attributeName="opacity" values="0.7;1;0.7" dur="2.5s" repeatCount="indefinite"/>
+    </rect>
+    <text x="265" y="244" text-anchor="middle" font-family="'Segoe UI', monospace" font-size="11" fill="#00d4ff" font-weight="600" letter-spacing="1">I2VGENXL</text>
+    <rect x="340" y="225" width="120" height="28" rx="14" fill="none" stroke="#7b2cbf" stroke-width="1" opacity="0.7">
+      <animate attributeName="opacity" values="0.7;1;0.7" dur="2.5s" begin="0.3s" repeatCount="indefinite"/>
+    </rect>
+    <text x="400" y="244" text-anchor="middle" font-family="'Segoe UI', monospace" font-size="11" fill="#7b2cbf" font-weight="600" letter-spacing="1">SDXL CINEMA</text>
+    <rect x="475" y="225" width="120" height="28" rx="14" fill="none" stroke="#ff006e" stroke-width="1" opacity="0.7">
+      <animate attributeName="opacity" values="0.7;1;0.7" dur="2.5s" begin="0.6s" repeatCount="indefinite"/>
+    </rect>
+    <text x="535" y="244" text-anchor="middle" font-family="'Segoe UI', monospace" font-size="11" fill="#ff006e" font-weight="600" letter-spacing="1">STORYBOARD</text>
+    <rect x="610" y="225" width="90" height="28" rx="14" fill="none" stroke="#00d4ff" stroke-width="1" opacity="0.7">
+      <animate attributeName="opacity" values="0.7;1;0.7" dur="2.5s" begin="0.9s" repeatCount="indefinite"/>
+    </rect>
+    <text x="655" y="244" text-anchor="middle" font-family="'Segoe UI', monospace" font-size="11" fill="#00d4ff" font-weight="600" letter-spacing="1">VOICEOVER</text>
+  </g>
+  <rect x="0" y="290" width="900" height="30" fill="#0a0a1a" opacity="0.8" rx="0 0 12 12"/>
+  <text x="30" y="309" font-family="'Segoe UI', monospace" font-size="10" fill="#00d4ff" opacity="0.8">
+    <animate attributeName="opacity" values="0.8;0.3;0.8" dur="1.5s" repeatCount="indefinite"/>●
+  </text>
+  <text x="45" y="309" font-family="'Segoe UI', monospace" font-size="10" fill="#a0a0c0">SYSTEM ONLINE</text>
+  <text x="450" y="309" text-anchor="middle" font-family="'Segoe UI', monospace" font-size="10" fill="#606080">v2.0.0  ·  PRODUCTION-GRADE  ·  GPU-OPTIMIZED  ·  GRADIO-POWERED</text>
+  <text x="870" y="309" text-anchor="end" font-family="'Segoe UI', monospace" font-size="10" fill="#a0a0c0">L4/A100 READY</text>
+  <g transform="translate(30, 140)" opacity="0.4">
+    <rect x="0" y="0" width="3" height="20" rx="1.5" fill="#00d4ff">
+      <animate attributeName="height" values="20;40;10;30;20" dur="1.2s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="0;-10;5;-5;0" dur="1.2s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="8" y="0" width="3" height="30" rx="1.5" fill="#00d4ff">
+      <animate attributeName="height" values="30;15;45;20;30" dur="1.4s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="0;7;-7;5;0" dur="1.4s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="16" y="0" width="3" height="15" rx="1.5" fill="#00d4ff">
+      <animate attributeName="height" values="15;35;10;40;15" dur="1.1s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="0;-10;2;-12;0" dur="1.1s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="24" y="0" width="3" height="25" rx="1.5" fill="#00d4ff">
+      <animate attributeName="height" values="25;10;35;15;25" dur="1.3s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="0;7;-5;5;0" dur="1.3s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="32" y="0" width="3" height="35" rx="1.5" fill="#00d4ff">
+      <animate attributeName="height" values="35;20;40;10;35" dur="1.5s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="0;7;-2;12;0" dur="1.5s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+  <g transform="translate(838, 140)" opacity="0.4">
+    <rect x="0" y="0" width="3" height="25" rx="1.5" fill="#ff006e">
+      <animate attributeName="height" values="25;10;40;15;25" dur="1.3s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="0;7;-7;5;0" dur="1.3s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="8" y="0" width="3" height="35" rx="1.5" fill="#ff006e">
+      <animate attributeName="height" values="35;15;30;10;35" dur="1.5s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="0;10;2;12;0" dur="1.5s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="16" y="0" width="3" height="20" rx="1.5" fill="#ff006e">
+      <animate attributeName="height" values="20;40;10;35;20" dur="1.2s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="0;-10;5;-7;0" dur="1.2s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="24" y="0" width="3" height="30" rx="1.5" fill="#ff006e">
+      <animate attributeName="height" values="30;20;15;40;30" dur="1.4s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="0;5;7;-5;0" dur="1.4s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="32" y="0" width="3" height="15" rx="1.5" fill="#ff006e">
+      <animate attributeName="height" values="15;35;25;10;15" dur="1.1s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="0;-10;0;2;0" dur="1.1s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+  <g opacity="0.15" transform="translate(120, 160)">
+    <polygon points="0,-20 17.3,-10 17.3,10 0,20 -17.3,10 -17.3,-10" fill="none" stroke="#00d4ff" stroke-width="1">
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="20s" repeatCount="indefinite"/>
+    </polygon>
+  </g>
+  <g opacity="0.15" transform="translate(780, 160)">
+    <polygon points="0,-15 13,-7.5 13,7.5 0,15 -13,7.5 -13,-7.5" fill="none" stroke="#ff006e" stroke-width="1">
+      <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="15s" repeatCount="indefinite"/>
+    </polygon>
+  </g>
+  <circle cx="450" cy="130" r="80" fill="none" stroke="#00d4ff" stroke-width="0.5" opacity="0">
+    <animate attributeName="r" values="80;200" dur="4s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.3;0" dur="4s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="450" cy="130" r="80" fill="none" stroke="#ff006e" stroke-width="0.5" opacity="0">
+    <animate attributeName="r" values="80;200" dur="4s" begin="2s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.3;0" dur="4s" begin="2s" repeatCount="indefinite"/>
+  </circle>
+</svg>
